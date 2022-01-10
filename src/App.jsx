@@ -5,7 +5,7 @@ import 'jquery-ui/ui/effects/effect-fade'
 import $ from 'jquery';
 import quotes from './quotes';
 
-import { BsTwitter, BsFacebook } from "react-icons/bs";
+import { BsTwitter, BsFacebook, BsWhatsapp } from "react-icons/bs";
 function App() {
 
 const [quote, setQuote] = useState("");
@@ -58,7 +58,7 @@ const newQuote = () => {
         </div>
         <div className="btns">
           <div className="btns-post">
-            <a href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${quote} " . ${author} \n`} target="_blank" rel="noreferrer">
+            <a href={`https://twitter.com/intent/tweet?hashtags=quotes&related=boukytech&text="${quote} " . ${author} \n`} target="_blank" rel="noreferrer">
               <button id="tweet-quote">
                 <BsTwitter />
               </button>
@@ -66,6 +66,11 @@ const newQuote = () => {
             <a href={`https://www.facebook.com/sharer/sharer.php?u=github.com%2FBoukymen%2FRamdom-quote&quote="${quote}". ${author}`}target="_blank" rel="noreferrer">
               <button id="tweet-quote">
                 <BsFacebook />
+              </button>
+            </a>
+            <a href={`https://api.whatsapp.com/?text="${quote} " . ${author} \n`} target="_blank" rel="noreferrer">
+              <button id="tweet-quote">
+                <BsWhatsapp />  
               </button>
             </a>
 
